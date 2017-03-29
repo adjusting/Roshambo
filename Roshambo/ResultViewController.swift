@@ -43,5 +43,9 @@ class ResultViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func dismiss() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
 
