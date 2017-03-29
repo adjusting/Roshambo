@@ -25,6 +25,9 @@
                                 <rect key="frame" x="284" y="301" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="scissors"/>
+                                <connections>
+                                    <segue destination="ffn-o3-vS4" kind="presentation" identifier="scissorsSegue" id="JAZ-WZ-am2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOG-LD-t8i" userLabel="Scissors">
                                 <rect key="frame" x="150" y="301" width="75" height="65"/>
@@ -93,4 +96,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JAZ-WZ-am2"/>
+    </inferredMetricsTieBreakers>
 </document>

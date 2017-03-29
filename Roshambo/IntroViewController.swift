@@ -80,13 +80,20 @@ class IntroViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
+        var player = 0
         if segue.identifier == "paperSegue" {
-            let controller = segue.destination as! ResultViewController
-            
-            let opponent = opponentsMove()
-            controller.resultMessage = resultMessage(player: 1, opponent: opponent)
-            controller.resultImage = resultImage(player: 1, opponent: opponent)        }
+            player = 1
+        }
+        if segue.identifier == "scissorsSegue" {
+            player = 2
+        }
+        let controller = segue.destination as! ResultViewController
+        let opponent = opponentsMove()
+        
+        controller.resultMessage = resultMessage(player: player, opponent: opponent)
+        controller.resultImage = resultImage(player: player, opponent: opponent)
+
     }
 }
 
