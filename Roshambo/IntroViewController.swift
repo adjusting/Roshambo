@@ -61,5 +61,18 @@ class IntroViewController: UIViewController {
             return UIImage(named: "itsATie")
         }
     }
+    
+    @IBAction func rockTransition() {
+        
+        let controller: ResultViewController
+        controller = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+            
+        let opponent = opponentsMove()
+        controller.resultMessage = resultMessage(player: 0, opponent: opponent)
+        controller.resultImage = resultImage(player: 0, opponent: opponent)
+        
+        
+        present(controller, animated: true, completion: nil)
+    }
 }
 
