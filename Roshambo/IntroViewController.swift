@@ -74,5 +74,19 @@ class IntroViewController: UIViewController {
         
         present(controller, animated: true, completion: nil)
     }
+    
+    @IBAction func paperTransition(){
+        performSegue(withIdentifier: "paperSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "paperSegue" {
+            let controller = segue.destination as! ResultViewController
+            
+            let opponent = opponentsMove()
+            controller.resultMessage = resultMessage(player: 1, opponent: opponent)
+            controller.resultImage = resultImage(player: 1, opponent: opponent)        }
+    }
 }
 
