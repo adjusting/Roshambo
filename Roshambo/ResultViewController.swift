@@ -44,7 +44,10 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction func dismiss() {
-        self.dismiss(animated: true, completion: nil)
+        if let navigationController = navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
+        // self.dismiss(animated: true, completion: nil)
     }
 
 }

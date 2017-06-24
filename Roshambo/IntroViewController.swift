@@ -71,8 +71,7 @@ class IntroViewController: UIViewController {
         controller.resultMessage = resultMessage(player: 0, opponent: opponent)
         controller.resultImage = resultImage(player: 0, opponent: opponent)
         
-        
-        present(controller, animated: true, completion: nil)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func paperTransition(){
